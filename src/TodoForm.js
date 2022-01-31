@@ -13,8 +13,9 @@ const TodoForm = (props)=> {
       // skip add to DB...
       
       // update UI
-      let todo = {name:data.name, complete:false, id:Math.random()}
+      let todo = {name:data.name, complete:false, id:props.nextId}
       props.dispatch({type:'ADD_TODO', todo: todo})
+      props.dispatch({type:'INC_ID'})
   }
    
   return (
@@ -28,4 +29,8 @@ const TodoForm = (props)=> {
   );
 }
 
-export default connect()(TodoForm)
+const mapStateToProps = (state)=>{
+    return {nextId: state.nextId}
+}
+
+export default connect(mapStateToProps)(TodoForm)

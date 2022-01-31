@@ -5,11 +5,7 @@
 // a reducer is just a function it takes state and an 'action' and returns
 // a new state, also does not mutate original state.
 
-const initialState = [
-  { name: "initial state todo 1", id: 0, complete: true },
-  { name: "initial state todo 2", id: 1, complete: false },
-  { name: "initial state todo 3", id: 3, complete: false },
-];
+const initialState = [];
 
 // what is an action? an action is a javascript object, that needs atleast
 // the type key,
