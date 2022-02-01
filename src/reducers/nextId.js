@@ -1,6 +1,7 @@
+export const INC_ID = "INC_ID"
 const nextId = (state=0, action)=>{
     switch(action.type){
-        case "INC_ID":
+        case INC_ID:
             return state + 1
         default:
           return state   
